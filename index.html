@@ -3,14 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <title>Quarterly Earnings Report</title>
+
+    <!-- Reveal.js Core Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" />
+
+    <!-- Highlight.js Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/monokai.css" />
+
+    <!-- Reveal.js Plugins -->
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/monokai.css">
   </head>
   <body>
     <div class="reveal">
@@ -19,16 +25,17 @@
         <!-- Markdown Slide -->
         <section data-markdown>
           <textarea data-template>
-            ## Quarterly Highlights
+## Quarterly Highlights
 
-            - Revenue increased by 12%
-            - Net profit margin improved
-            - Strategic investments in AI
+- Revenue increased by 12%
+- Net profit margin improved
+- Strategic investments in AI
 
-            ---
-            ## Contact
+---
 
-            📧 23f2003879@ds.study.iitm.ac.in
+## Contact
+
+📧 23f2003879@ds.study.iitm.ac.in
           </textarea>
         </section>
 
@@ -43,13 +50,12 @@
           <aside class="notes">Explain regional performance and growth drivers.</aside>
         </section>
 
-        <!-- Code Sample -->
+        <!-- Code Sample with Highlighting -->
         <section>
           <h2>Data Analysis Pipeline</h2>
-          <pre><code class="python" data-line-numbers="1-2|4,6">
+          <pre><code class="python" data-trim data-line-numbers="1-2|4,5">
 import pandas as pd
 import matplotlib.pyplot as plt
-
 df = pd.read_csv('data/earnings.csv')
 df.groupby('region').sum().plot(kind='bar')
 plt.show()
@@ -63,7 +69,7 @@ plt.show()
           
 
 \[
-          \text{Profit Margin} = \frac{\text{Net Income}}{\text{Revenue}} \times 100
+            \text{Profit Margin} = \frac{\text{Net Income}}{\text{Revenue}} \times 100
           \]
 
 
@@ -73,12 +79,16 @@ plt.show()
       </div>
     </div>
 
+    <!-- Reveal.js Initialization -->
     <script>
       Reveal.initialize({
         plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes],
         controls: true,
         progress: true,
         transition: 'slide',
+        highlight: {
+          highlightOnLoad: true
+        }
       });
     </script>
   </body>
