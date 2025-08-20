@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Quarterly Earnings Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" />
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Markdown Slide -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Quarterly Highlights
+
+            - Revenue increased by 12%
+            - Net profit margin improved
+            - Strategic investments in AI
+
+            ---
+            ## Contact
+
+            📧 23f2003879@ds.study.iitm.ac.in
+          </textarea>
+        </section>
+
+        <!-- Animated Fragments -->
+        <section>
+          <h2>Revenue Breakdown</h2>
+          <ul>
+            <li class="fragment">North America: $2.1B</li>
+            <li class="fragment">Europe: $1.4B</li>
+            <li class="fragment fade-up">Asia-Pacific: $900M</li>
+          </ul>
+          <aside class="notes">Explain regional performance and growth drivers.</aside>
+        </section>
+
+        <!-- Code Sample -->
+        <section>
+          <h2>Data Analysis Pipeline</h2>
+          <pre><code class="python" data-line-numbers="1-2|4,6">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('data/earnings.csv')
+df.groupby('region').sum().plot(kind='bar')
+plt.show()
+          </code></pre>
+          <aside class="notes">Highlight how data was processed for visualization.</aside>
+        </section>
+
+        <!-- Math Equation -->
+        <section>
+          <h2>Profit Margin Formula</h2>
+          
+
+\[
+          \text{Profit Margin} = \frac{\text{Net Income}}{\text{Revenue}} \times 100
+          \]
+
+
+          <aside class="notes">Use this to explain financial efficiency.</aside>
+        </section>
+
+      </div>
+    </div>
+
+    <script>
+      Reveal.initialize({
+        plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes],
+        controls: true,
+        progress: true,
+        transition: 'slide',
+      });
+    </script>
+  </body>
+</html>
